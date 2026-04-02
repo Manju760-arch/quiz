@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="title">Choose a Subject</h1>
+
+  <div class="grid">
+    <div class="card subject-card" 
+         *ngFor="let sub of subjects" 
+         (click)="startQuiz(sub)">
+
+      <h3>{{sub | uppercase}}</h3>
+      <p>Start quiz and test your knowledge</p>
+
+    </div>
+  </div>
+</div>

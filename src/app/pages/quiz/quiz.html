@@ -1,0 +1,25 @@
+<div class="container" *ngIf="questions.length">
+
+  <div class="card quiz-box">
+
+    <div class="top-bar">
+      <span>Question {{current + 1}} / {{questions.length}}</span>
+      <span class="timer">⏱ {{timer}}s</span>
+    </div>
+
+    <h2>{{questions[current].question}}</h2>
+
+    <div class="options">
+      <button 
+        *ngFor="let opt of questions[current].options"
+        (click)="select(opt)"
+        [class.active]="selected === opt">
+        {{opt}}
+      </button>
+    </div>
+
+    <button class="btn next-btn" (click)="next()">Next</button>
+
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="card result-box">
+
+    <h2>Your Score</h2>
+
+    <div class="score-circle">
+      {{score}} / {{total}}
+    </div>
+
+    <p class="message">
+      {{ score > total/2 ? 'Great Job! 🎉' : 'Keep Practicing 💪' }}
+    </p>
+
+    <button class="btn" (click)="retry()">Back to Home</button>
+
+  </div>
+
+</div>
